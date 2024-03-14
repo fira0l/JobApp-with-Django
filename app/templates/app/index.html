@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .body{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    width:75%;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+p{
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+    </style>
+  </head>
+  <body>
+    {% if is_authenthicated %}
+    <h1>Hello {{name}}</h1>
+    <h1>{{age}}</h1>
+    {% else %}
+    <h1>Hello ,Visitor</h1>
+    {% endif %} 
+    {% for  i in first_list %}
+      <p>{{i}}</p>
+    {% endfor %}
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo ab id neque.
+      Obcaecati, accusamus illo quibusdam corporis iusto nesciunt soluta
+      dignissimos aperiam corrupti, placeat adipisci! Quis temporibus,
+      cupiditate, quae repudiandae impedit animi sed quos sint fuga doloribus
+      earum pariatur libero vitae odio tempora perspiciatis officia. Aliquam non
+      dolorem itaque porro esse ea ipsum pariatur perspiciatis voluptatum culpa
+      cupiditate necessitatibus saepe, et exercitationem magni. Numquam quasi
+      voluptas, mollitia facere est illo a doloribus, laboriosam laborum libero
+      repellendus amet delectus. Eos ex, corrupti vero veniam rem consequuntur
+      sequi explicabo omnis quia perferendis itaque, repudiandae inventore harum
+      ratione culpa tempora, quisquam unde magni!
+    </p>
+    <h2>{{first_list.0}}</h2>
+    <h2>{{temp_object.x}}</h2>
+  </body>
+</html>

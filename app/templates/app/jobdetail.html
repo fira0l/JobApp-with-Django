@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}FlixCareers | {{job.title}} {% endblock title %}
+{% block content %}
+    <section>
+      <div class="container">
+        <div class="view-post">
+          <h1 class="jobtitle">
+           {{job.title}}
+          </h1>
+          <p class="location it">Location: <span>{{job.location}}</span></p>
+          <p class="status it">Type: <span>{{job.type}}</span></p>
+          <p class="budget it">Salary: <span>{{job.salary}}$</span></p>
+          <div class="desc">
+            <p class="details">
+                {{job.description}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endblock content %}
